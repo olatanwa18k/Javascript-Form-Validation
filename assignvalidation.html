@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="pt-5">
+                    <h1>User Registration Form</h1>
+                </div>
+
+                <form action="">
+                    <div>
+                        <label for="name">Username</label>
+                        <input class="form-control" type="text" id="name" name="name" placeholder="Enter Username">
+                    </div>
+                     <br>
+                    <div>
+                        <label for="name">Password</label>
+                        <input class="form-control" type="password" id="password" name="password"  placeholder="Enter Password">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="name">Confirm Password</label>
+                        <input class="form-control" type="password" id="confirmPassword" name="confirmpassword"  placeholder="Confirm Password">
+                    </div>
+                    <br>
+                    <div>
+                        <input type="button btn btn-12" class="btn btn-primary" onclick="validateform()" value="Register">
+                    </div>
+                </form>  
+            </div>
+        </div>
+    </div>
+    <script>
+          function validateform(){
+        var userName = document.getElementById("name").value;
+        var userPassword = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+      
+        if(userName ==""|| userPassword ==""|| confirmPassword ==""){
+        alert("please fill in all field");
+         }
+         else if(userPassword!== confirmPassword){
+            alert("Password do not match");
+         }else{
+            alert("password match")
+
+         }
+        }
+
+    </script>
+</body>
+</html>
